@@ -3,7 +3,7 @@ name: Commit-Action
 on:
   push:
     branches:
-    - feat/ci-on-commit
+    - feat/chore-update-status
 
 jobs:
   print-vers:
