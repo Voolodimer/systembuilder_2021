@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: git_clone_repo
+      uses : actions/checkout@v1
+
     - name: print_files
       run : ls
 
