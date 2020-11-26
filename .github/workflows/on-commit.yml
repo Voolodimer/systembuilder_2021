@@ -10,5 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Print Python Version
-      run : python --version 
+    - name: Print_ls
+      run : ls
+
+    - name: Print_json
+      run : cat status.json 
