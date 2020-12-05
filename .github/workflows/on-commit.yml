@@ -6,16 +6,25 @@ on:
     - feat/chore-update-status
 
 jobs:
-  print-vers:
+  updater:
+    if  : !(github.event.head_commit.message == 'chore: upload status')
     runs-on: ubuntu-latest
-
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      DEV_BOT_TOKEN: ${{ secrets.DEV_BOT_TOKEN }}
     steps:
-    - name: git_clone_repo
-      uses : actions/checkout@v1
+    - name: Git_clone_repo
+      uses: actions/checkout@v1
 
-    - name: print_files
-      run : ls
+    - name: Set_commit
+      run : |
+        git config --global user.name = "DEV_BOT"
+        git config --global user.email = aka1306@gmail.com
+        git add status.json
+        git commit -qm "chore: update status"
 
-    - name: print_json
-      run : cat status.json
+    - name: Push commit
+      uses: ad-m/github-push-action@master
+
+        
 
