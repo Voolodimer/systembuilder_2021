@@ -7,7 +7,7 @@ on:
 
 jobs:
   updater:
-    if: "!startsWith(github.event.head_commit.message == 'chore: upload status'"
+    if: "!startsWith(github.event.head_commit.message == 'chore: upload status')"
     runs-on: ubuntu-latest
     env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
