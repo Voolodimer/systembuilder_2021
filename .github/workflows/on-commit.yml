@@ -1,4 +1,4 @@
-name: Commit-Actionz
+name: Commit-Action
 
 on:
   push:
