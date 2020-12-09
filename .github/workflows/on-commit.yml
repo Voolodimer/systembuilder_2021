@@ -16,11 +16,7 @@ jobs:
     - name: Git_clone_repo
       uses: actions/checkout@v2
       with:
-<<<<<<< HEAD
         repository: antonkurenkov/systembuilder_2021
-=======
-        repository: Voolodimer/systembuilder_2021
->>>>>>> 94ae0c1479551e8fd1cc0dc6c9f9a76d7ae448d4
         token: ${{ secrets.DEV_BOT_TOKEN }}
 
     - name: run_builder
@@ -30,11 +26,6 @@ jobs:
       run : |
         git config --global user.name = "dev-bot0"
         git config --global user.email = aka1306@gmail.com
-<<<<<<< HEAD
-=======
-        pwd
-        ls
->>>>>>> 94ae0c1479551e8fd1cc0dc6c9f9a76d7ae448d4
         git add status.json
         git commit -qm "chore: update status"
 
@@ -45,9 +36,3 @@ jobs:
         repository: antonkurenkov/systembuilder_2021
         branch: develop
         force: true
-<<<<<<< HEAD
-=======
-
-        
-
->>>>>>> 94ae0c1479551e8fd1cc0dc6c9f9a76d7ae448d4
