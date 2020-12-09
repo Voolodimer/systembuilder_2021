@@ -14,7 +14,7 @@ jobs:
       DEV_BOT_TOKEN: ${{ secrets.DEV_BOT_TOKEN }}
     steps:
     - name: Git_clone_repo
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
       with:
         repository: antonkurenkov/systembuilder_2021
         token: ${{ secrets.DEV_BOT_TOKEN }}
