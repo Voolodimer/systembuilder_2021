@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v1
       with:
         repository: antonkurenkov/systembuilder_2021
-        token: ${{ env.DEV_BOT_TOKEN }}
+        token: ${{ secrets.DEV_BOT_TOKEN }}
 
     - name: run_builder
       run: python ./src/builder.py
