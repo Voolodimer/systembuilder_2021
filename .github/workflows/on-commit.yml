@@ -15,16 +15,27 @@ jobs:
     steps:
     - name: Git_clone_repo
       uses: actions/checkout@v1
+      with:
+        repository: antonkurenkov/systembuilder_2021
+        token: ${{ env.DEV_BOT_TOKEN }}
+
+    - name: run_builder
+      run: python ./src/builder.py
 
     - name: Set_commit
       run : |
-        git config --global user.name = "DEV_BOT"
+        git config --global user.name = "dev-bot0"
         git config --global user.email = aka1306@gmail.com
         git add status.json
         git commit -qm "chore: update status"
 
     - name: Push commit
       uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ env.DEV_BOT_TOKEN }}
+        repository: antonkurenkov/systembuilder_2021
+        branch: develop
+        force: true
 
         
 
