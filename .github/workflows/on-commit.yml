@@ -16,7 +16,7 @@ jobs:
     - name: Git_clone_repo
       uses: actions/checkout@v2
       with:
-        repository: antonkurenkov/systembuilder_2021
+        repository: Voolodimer/systembuilder_2021
         token: ${{ secrets.DEV_BOT_TOKEN }}
 
     - name: run_builder
