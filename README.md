@@ -8,5 +8,5 @@ CI/CD — это комбинация непрерывной интеграци�
 ## Документация
 ## Контакты
 vladimirbruho@gmail.com
-## Стутус проекта
+## Статус проекта
 <br><img src="https://github.com/Voolodimer/systembuilder_2021/workflows/Commit-Action/badge.svg"><br>
