@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"2020-08-27 19:23:57": {"sample_1": {"status": true, "message": null, "builder_release": 0.9}}}
+=======
+{"Wed Dec 16 15:29:38 2020": {"sample-1": {"builder_release": 0.9, "status": true, "message": null}, "sample-2": {"builder_release": 0.9, "status": true, "message": null}, "sample-3": {"builder_release": 0.9, "status": true, "message": null}}}
+>>>>>>> 8d0d804dc4c418acf6df42712041ce66105b0124
