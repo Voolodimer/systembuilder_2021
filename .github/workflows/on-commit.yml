@@ -52,7 +52,6 @@ jobs:
           force: true
           directory: repo
           persist-credentials: false
-          fetch-depth: 0
 
       - name: Sending message to telegram chat
         run: |
