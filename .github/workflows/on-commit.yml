@@ -38,10 +38,12 @@ jobs:
           python src/builder.py
       - name: Committing updated status map
         run: |
+          ls
           pwd
           cd repo
+          ls
           pwd
-          ce repo
+          cd repo
           pwd
           ls
           git config --local user.email "aka1306@gmail.com"
