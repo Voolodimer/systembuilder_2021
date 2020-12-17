@@ -33,6 +33,7 @@ class Parser:
 
         info = subprocess.run(['git', 'log', '-2', '--pretty=format:"%an - %s"'], stdout=subprocess.PIPE)\
             .stdout.decode("utf-8").split('\n')[-1]
+        print(info)
         self.author_name, self.commit_message = info.strip('"').split('-')
 
         self.commit_id = subprocess.run(['git', 'log', '-1', '--pretty=oneline'], stdout=subprocess.PIPE) \
