@@ -53,7 +53,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.DEV_BOT_TOKEN }}
-          repository: artemkurenkov/systembuilder_2021
+          repository: Voolodimer/systembuilder_2021
           branch: ${{ github.ref }}
           force: true
           directory: repo
