@@ -3,44 +3,7 @@ name: Commit-Action
 on:
   push:
     branches:
-<<<<<<< HEAD
     - feat/chore-update-status
-
-jobs:
-  updater:
-    if: "!startsWith(github.event.head_commit.message, 'chore: upload status')"
-    runs-on: ubuntu-latest
-    env:
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      DEV_BOT_TOKEN: ${{ secrets.DEV_BOT_TOKEN }}
-    steps:
-    - name: Git_clone_repo
-      uses: actions/checkout@v2
-      with:
-        repository: Voolodimer/systembuilder_2021
-        token: ${{ secrets.DEV_BOT_TOKEN }}
-
-    - name: run_builder
-      run: python ./src/builder.py
-
-    - name: Set_commit
-      run : |
-        pwd
-        ls
-        git config --global user.name = "dev-bot0"
-        git config --global user.email = aka1306@gmail.com
-        git add status.json
-        git commit -qm "chore: update status"
-
-    - name: Push commit
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ env.DEV_BOT_TOKEN }}
-        repository: antonkurenkov/systembuilder_2021
-        branch: develop
-        force: true
-=======
-      - ref/builder
 jobs:
   build:
     name: Single Job
@@ -96,4 +59,3 @@ jobs:
         run: |
           cd repo
           python chore/notifier.py
->>>>>>> 8d0d804dc4c418acf6df42712041ce66105b0124
