@@ -50,7 +50,7 @@ jobs:
         with:
           github_token: ${{ secrets.DEV_BOT_TOKEN }}
           repository: Voolodimer/systembuilder_2021
-          branch: ${{ github.ref }}
+          branch: ref/builder
           force: true
           directory: repo
 
