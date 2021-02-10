@@ -1,7 +1,7 @@
 name: scheduler
 on:
   schedule:
-    - cron: '*/1000 * * * *'
+    - cron: '* * * 1 *'
       
 jobs:
   schedule_action:
